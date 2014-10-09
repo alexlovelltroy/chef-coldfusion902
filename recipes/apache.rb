@@ -29,8 +29,8 @@ web_app "coldfusion" do
 end
 
 # Link httpd.conf
-link "#{node['apache']['dir']}/conf.d/coldfusion-httpd.conf" do
-  to "#{node['apache']['dir']}/httpd.conf"
+link "#{node['apache']['dir']}/sites-available/coldfusion.conf" do
+  to "#{node['apache']['dir']}/sites-enabled/"
   notifies :restart, "service[apache2]", :delayed
 end
 
