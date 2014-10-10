@@ -46,6 +46,14 @@ package "unzip" do
   action :install
 end
 
+# Install the ia32 libs because the CF9 installer assumes that 32bit will work
+package "multiarch-support" do
+    action :install
+end
+package "ia32-libs" do
+    action :install
+end
+
 include_recipe "coldfusion902::standalone"
 include_recipe "coldfusion902::jvmconfig"
 include_recipe "coldfusion902::updates"
