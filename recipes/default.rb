@@ -52,6 +52,7 @@ package "multiarch-support" do
 end
 package "ia32-libs" do
     action :install
+    only_if { node[:platform_version] == "10.04" }
 end
 
 include_recipe "coldfusion902::standalone"
