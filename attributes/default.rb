@@ -2,6 +2,8 @@
 default['cf902']['installer']['url'] = "http://download.macromedia.com/pub/coldfusion/cf9_installer/ColdFusion_9_WWEJ_linux.bin"
 # default['cf902']['installer']['cookbook_file'] = "ColdFusion_10_WWEJ_linux32.bin"
 # default['cf902']['installer']['local_file'] = "/tmp/ColdFusion_10_WWEJ_linux32.bin"
+# CF9 requires jrun which is only supported on apache 2.2
+default['apache']['version'] = "2.2"
 
 # CF Install folder
 default['cf902']['install_path'] = "/opt/coldfusion9"
