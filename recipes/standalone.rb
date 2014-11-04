@@ -30,12 +30,3 @@ service "coldfusion" do
   supports :restart => true
   action :enable
 end
-
-# Create the webroot if it doesn't exist
-directory "#{node['cf902']['webroot']}" do
-  owner node['cf902']['cf_user']
-  group node['cf902']['cf_group']
-  mode "0755"
-  action :create
-  not_if { File.directory?("#{node['cf902']['webroot']}") }
-end
