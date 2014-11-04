@@ -5,8 +5,8 @@ default['cf902']['installer']['url'] = "http://download.macromedia.com/pub/coldf
 # CF9 requires jrun which is only supported on apache 2.2
 default['apache']['version'] = "2.2"
 
-default['cf903']['cf_user'] = "nobody"
-default['cf903']['cf_group'] = "nogroup"
+default['cf902']['cf_user'] = "nobody"
+default['cf902']['cf_group'] = "nogroup"
 
 # CF Install folder
 default['cf902']['install_path'] = "/opt/coldfusion9"
